@@ -11,14 +11,10 @@
         $white = imagecolorallocate($im, 255, 255, 255);
         $black = imagecolorallocate($im, 0, 0, 0);
 
-        // set background colour.
         imagefilledrectangle($im, 0, 0, 150, 75, $bg);
-
-        // output text.
         imagettftext($im, 35, rand(-25,25), 10, 55, $black, './arial.ttf', $captcha);
 
         for ($i = 0; $i < 50; $i++) {
-            //imagefilledrectangle($im, $i + $i2, 5, $i + $i3, 70, $black);
             imagesetthickness($im, rand(1, 5));
             imagearc(
                 $im,
